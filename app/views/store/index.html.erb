@@ -1,0 +1,31 @@
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12 col-lg-12 col-sm-12 mx-auto shadow-lg p-3 hello mb-2 mx-2">
+		<% if notice %>
+		  <aside id="notice"><%= notice %></aside>
+		<% end %>
+        <h1 class="text-center pb-3 card bg-white text-danger fw-bold">Your Pragmatic Catalog</h1>
+		<% cache @products do %>
+		<% @products.each do |product| %>
+		<% cache product do %>
+			<div class="row">
+				<div class="col-md-4 col-lg-4 col-sm-12">
+					<%= image_tag(product.image_url, class: 'w-100 h-100 py-2') %>
+				</div>
+				<div class="col-md-8 col-lg-8 col-sm-12">
+					<h2><%= product.title %></h2>
+					<p><%= sanitize(product.description) %></p>
+					<div class="price">
+					  <%= number_to_currency(product.price) %>
+					  <%= button_to 'Add to Cart', line_items_path(product_id: product), class: 'btn btn-success d-flex flex-row' %>
+					</div>
+				</div>
+			</div>
+		<% end %>
+        <% end %>
+		<% end %>
+	</div>
+</div>
+</div>
+
