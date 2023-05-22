@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Dave Thomas
+  address: Rajasthan
+  email: dave@example.org
+  pay_type: check
+
+two:
+  name: Thomas Dave
+  address: Delhi
+  email: thomas@example.org
+  pay_type: 1

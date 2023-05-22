@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 col-lg-8 col-sm-12 mx-auto shadow-lg p-5 hello mb-2 mx-2">
+      <p style="color: green"><%= notice %></p>
+      <%= render @order %>
+      <div>
+      <%= link_to "Edit this order", edit_order_path(@order) %> |
+      <%= link_to "Back to orders", orders_path %>
+      <%= button_to "Destroy this order", @order, method: :delete, class: 'btn btn-danger' %>
+      </div>
+
+    </div>
+  </div>
+</div>

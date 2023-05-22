@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-lg-6 col-sm-12 mx-auto shadow-lg p-5 hello mb-2 mx-2">
+      <%= form_with(model: order, local: true) do |form| %>
+      <% if order.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(order.errors.count, "error") %>
+        prohibited this order from being saved:</h2>
+        <ul>
+          <% order.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+      <% end %>
+      <div class="field my-2">
+        <%= form.label :name, style: "display: block" %>
+        <%= form.text_field :name, class: 'form-control', size: 40 %>
+      </div>
+      <div class="field my-2">
+        <%= form.label :email, style: "display: block" %>
+        <%= form.text_field :email, class: 'form-control', size: 40 %>
+      </div>
+      <div class="field my-2">
+        <%= form.label :pay_type, style: "display: block" %>
+        <%= form.select :pay_type, Order.pay_types.keys, {prompt: 'Select a payment method'}, {class: 'form-control'} %>
+      </div>
+       <div class="field my-2">
+        <%= form.label :address, style: "display: block" %>
+        <%= form.text_area :address, class: 'form-control', rows: 3, cols: 40 %>
+      </div>
+      <div class="field my-2">
+        <%= form.submit 'Place Order', class: 'form-control btn btn-primary my-2'%>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

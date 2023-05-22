@@ -15,11 +15,11 @@
         <li class="nav-item">
           <a class="nav-link" href="<%= line_items_path %>">Line Item</a>
         </li>
-                <li class="nav-item">
-          <a class="nav-link" href="<%= carts_path %>">Cart</a>
+        <li class="nav-item">
+          <a class="nav-link" href="<%= carts_path %>">Cart(<%= (Cart.count) %>)</a>
         </li>
 
-<!--         <li class="nav-item dropdown">
+   <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
           </a>
@@ -30,7 +30,7 @@
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
-        <li class="nav-item">
+<!--         <li class="nav-item">
           <a class="nav-link disabled">Disabled</a>
         </li> -->
       </ul>
