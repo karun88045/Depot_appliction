@@ -5,3 +5,5 @@ import "bootstrap"
 
 //= require jquery
 //= require jquery_ujsimport "channels"
+import "trix"
+import "@rails/actiontext"
