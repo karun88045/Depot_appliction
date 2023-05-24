@@ -5,20 +5,20 @@
 		<% if notice %>
 		  <aside id="notice"><%= notice %></aside>
 		<% end %>
-        <h1 class="text-center pb-3 card bg-white text-danger fw-bold">Your Pragmatic Catalog</h1>
+        <h1 class="text-center pb-3 card bg-white text-dark">Your Pragmatic Catalog</h1>
 		<% cache @products do %>
 		  <% @products.each do |product| %>
 		    <% cache product do %>
 				<div class="row">
 					<div class="col-md-4 col-lg-4 col-sm-12">
-						<%= image_tag(product.image_url, class: 'w-100 h-100 py-2') %>
+						<%= image_tag(product.image_url, class: 'w-100 h-100 p-4 card') %>
 					</div>
-					<div class="col-md-8 col-lg-8 col-sm-12">
+					<div class="col-md-8 col-lg-8 col-sm-12 card p-4">
 						<h2><%= product.title %></h2>
-						<p><%= sanitize(product.description) %></p>
-						<div class="price">
-						  <%= number_to_currency(product.price) %>
-						  <%= button_to 'Add to Cart', line_items_path(product_id: product), class: 'btn btn-success d-flex flex-row', remote: true %>
+						<p class=""><%= sanitize(product.description)  %></p>
+						<div class="price d-flex flex-row">
+						  <p class="text-danger p-2"><mark><%= number_to_currency(product.price) %></mark></p>
+						  <%= button_to 'Add to Cart', line_items_path(product_id: product), class: 'btn btn-success mx-2', remote: true %>
 						</div>
 					</div>
 				</div>

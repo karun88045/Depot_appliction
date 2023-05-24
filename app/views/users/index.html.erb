@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 col-lg-8 col-sm-12 mx-auto shadow-lg p-3 hello mb-2 mx-2">
+      <p style="color: green"><%= notice %></p>
+
+      <h1 class="text-center py-1">Users</h1>
+      <%= link_to "New user", new_user_path, class: 'btn btn-primary my-2' %>
+      <div id="users">
+        <% @users.each do |user| %>
+        <%= render user %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container-fluid">
+	<div class="row p-5">
+		<div class="col-md-6 col-lg-6 col-sm-12 mx-auto shadow-lg p-3 hello mb-2 mx-2">
+			<section class="depot_form">
+				<% if flash[:alert] %>
+			<aside class="notice"><%= flash[:alert] %></aside>
+			<% end %>
+			<%= form_tag do %>
+			<h2 class="text-center">Please Log In</h2>
+			<div class="field my-2">
+				<%= label_tag :name, 'Name:' %>
+				<%= text_field_tag :name, params[:name], class: 'form-control' %>
+			</div>
+			<div class="field my-2">
+				<%= label_tag :password, 'Password:' %>
+				<%= password_field_tag :password, params[:password], class: 'form-control' %>
+			</div>
+			<div class="actions my-2">
+				<%= submit_tag "Login", class: 'btn btn-success' %>
+			</div>
+			<% end %>
+		</section>
+	</div>
+</div>
+</div>

@@ -1,14 +1,17 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Orders</h1>
-
-<div id="orders">
-  <% @orders.each do |order| %>
-    <%= render order %>
-    <p>
-      <%= link_to "Show this order", order %>
-    </p>
-  <% end %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 col-lg-8 col-sm-12 mx-auto shadow-lg p-5 hello mb-2 mx-2">
+      <p style="color: green"><%= notice %></p>
+      <h1 class="text-center py-2">Orders</h1>
+      <div id="orders">
+        <%= link_to "New order", new_order_path, class: 'btn btn-primary my-2' %>
+        <% @orders.each do |order| %>
+        <%= render order %>
+        <p class="">
+          <%= link_to "Show this order", order, class: 'btn btn-secondary' %>
+        </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
-
-<%= link_to "New order", new_order_path %>
