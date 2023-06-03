@@ -1,6 +1,6 @@
 class SupportRequestsController < ApplicationController
   def index
-    @support_requests = SupportRequest.all
+    @support_requests = C.all
   end
   def update
     support_request = SupportRequest.find(params[:id])
