@@ -5,6 +5,8 @@
 		<% if notice %>
 		  <aside id="notice"><%= notice %></aside>
 		<% end %>
+
+		<h1><%= t('.title_html') %></h1>
         <h1 class="text-center pb-3 card bg-white text-dark">Your Pragmatic Catalog</h1>
 		<% cache @products do %>
 		  <% @products.each do |product| %>

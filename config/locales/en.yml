@@ -30,4 +30,26 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  layouts:
+    application:
+      title: "The Pragmatic Bookshelf"
+      home: "Home"
+      questions: "Questions"
+      news: "News"
+      contact: "Contact"
+
+en:
+  store:
+   index:
+    title_html: "Your Pragmatic Catalog"
+    add_html: "Add to Cart"
+
+
+
+# en:
+#   carts:
+#     cart:
+#       title: "Your Cart"
+#       empty: "Empty cart"
+#       checkout: "Checkout"
+#       rails6/depot_t/config/locales/es.yml
